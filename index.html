@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="menuscroller.js"></script>
+    <style>
+        .drag-menu-wrap {
+            width: 100%;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+        
+        .drag-menu-wrap,
+        .drag-menu-wrap *,
+        .drag-menu-wrap :after,
+        .drag-menu-wrap :before {
+            box-sizing: border-box
+        }
+        
+        ul.drag-menu {
+            white-space: nowrap;
+            list-style: none;
+            margin: 0;
+            position: relative;
+            padding: 0 0 20px;
+            text-align: center;
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        
+        ul.drag-menu>li>a {
+            padding: 0 10px;
+            font-size: 18px;
+            color: #585858;
+        }
+        
+        ul.drag-menu li {
+            display: inline-block;
+            position: relative;
+        }
+        
+        .drag-menu-wrap {
+            width: 767px;
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Dragging Element</h1>
+            <p>Draggable Horizontal menu,mobile touch friendly..</p>
+        </div>
+        <div class="drag-menu-wrap">
+            <ul id="drag-menu" class="drag-menu">
+                <li>
+                    <a href="javascript:void(0);">Home</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">About</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Servies</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Contact</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Portfolio</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Testimonials</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Team</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Career</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Feedbacks</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Nothing</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Home 2</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+<script>
+    $(function() {
+        $('#drag-menu').menuScroller();
+    });
+</script>
+
+</html>
